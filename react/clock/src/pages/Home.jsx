@@ -19,11 +19,11 @@ function Home() {
                 justifyContent: "center", 
                 gap: "30px",
                 flexWrap: "wrap",
-                maxWidth: "800px",
+                maxWidth: "1000px",
                 margin: "0 auto",
                 alignItems: "stretch"
             }}>
-                <Link to="/clock" style={{ textDecoration: "none", flex: "1", minWidth: "300px" }}>
+                <Link to="/clock" style={{ textDecoration: "none", flex: "1", minWidth: "280px" }}>
                     <div className="feature-card">
                         <div className="feature-icon">🕒</div>
                         <h3 style={{ marginBottom: "15px", color: "#1a1a1a" }}>时钟</h3>
@@ -32,12 +32,21 @@ function Home() {
                         </p>
                     </div>
                 </Link>
-                <Link to="/timer" style={{ textDecoration: "none", flex: "1", minWidth: "300px" }}>
+                <Link to="/timer" style={{ textDecoration: "none", flex: "1", minWidth: "280px" }}>
                     <div className="feature-card">
                         <div className="feature-icon">⏱️</div>
                         <h3 style={{ marginBottom: "15px", color: "#1a1a1a" }}>计时器</h3>
                         <p style={{ color: "#2d2d2d", lineHeight: "1.6" }}>
                             正向计时功能，支持开始、暂停、重置。精确计时，操作简单。
+                        </p>
+                    </div>
+                </Link>
+                <Link to="/weather" style={{ textDecoration: "none", flex: "1", minWidth: "280px" }}>
+                    <div className="feature-card">
+                        <div className="feature-icon">🌤️</div>
+                        <h3 style={{ marginBottom: "15px", color: "#1a1a1a" }}>天气</h3>
+                        <p style={{ color: "#2d2d2d", lineHeight: "1.6" }}>
+                            实时天气信息，支持多城市查询。温度、湿度、风向等详细信息。
                         </p>
                     </div>
                 </Link>
