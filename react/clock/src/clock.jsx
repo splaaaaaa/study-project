@@ -21,12 +21,20 @@ function Clock({title}){
     
     const handleToggle=()=>{setIsRunning(!isRunning)};
 
-
     return (
-        <div style={{border:"1px solid grey",padding:"20px",margin:"20px"}}>
-            <h2>{title}</h2>
-            <h3>当前时间：{date.toLocaleTimeString()}</h3>
-            <button onClick={handleToggle}>{isRunning?"停止":"开始"}</button>
+        <div className="card">
+            <h2 className="section-title">{title}</h2>
+            <div className="time-display">
+                {date.toLocaleTimeString()}
+            </div>
+            <div style={{ textAlign: "center" }}>
+                <button 
+                    className={`btn ${isRunning ? 'btn-secondary' : 'btn-success'}`}
+                    onClick={handleToggle}
+                >
+                    {isRunning ? "⏸️ 暂停" : "▶️ 开始"}
+                </button>
+            </div>
         </div>
     )
 };

@@ -1,18 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-import React from 'react'
-
-import Clock from './clock'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import ClockPage from './pages/ClockPage';
+import TimerPage from './pages/TimerPage';
+import './App.css';
 
 function App() {
   return (
-    <div>
-      <h1>🕒 计时器练习</h1>
-      <Clock title="这是一个可以暂停的时钟" />
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/clock" element={<ClockPage />} />
+          <Route path="/timer" element={<TimerPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
