@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import ClockPage from './pages/ClockPage';
 import TimerPage from './pages/TimerPage';
+import WeatherPage from './pages/WeatherPage';
 import './App.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/clock" element={<ClockPage />} />
           <Route path="/timer" element={<TimerPage />} />
+          <Route path="/weather" element={<WeatherPage />} />
         </Routes>
       </div>
     </Router>
