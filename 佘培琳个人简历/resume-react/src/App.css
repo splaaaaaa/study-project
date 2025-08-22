@@ -1,0 +1,450 @@
+/* 公共部分 */
+body {
+  background: #e5e5e5 url('/background.png');
+  width: 100%;
+  overflow-x: hidden;
+  padding: 1rem 10%;
+  padding-bottom: 0;
+  box-sizing: border-box;
+  font-size: .9em;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body .fa {
+  margin-right: .3em;
+}
+
+body .info-unit {
+  margin-bottom: 1rem;
+}
+
+body .info-unit h2 {
+  font-weight: 700;
+}
+
+body .info-unit h3 {
+  font-weight: 300;
+}
+
+/* 头部部分 */
+.header {
+  display: none;
+}
+
+/* 主体部分 */
+.container {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 侧边栏样式 */
+.side {
+  width: 20rem;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px #bbb;
+  box-sizing: border-box;
+  padding: 1rem;
+  flex-shrink: 0;
+}
+
+.side .me {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.side .me .portrait {
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  width: 8rem;
+  height: 8rem;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #e0e0e0;
+  border-radius: 50%;
+  background: #f8f8f8;
+}
+
+.side .me .portrait .loading {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8rem;
+  height: 4rem;
+  margin: 0 auto;
+}
+
+.side .me .portrait .loading span {
+  display: inline-block;
+  width: 8px;
+  height: 100%;
+  border-radius: 4px;
+  background: lightgreen;
+  animation: load 1s ease infinite;
+}
+
+/* 加载动画 */
+@-webkit-keyframes load {
+  0%, 100% {
+    height: 3rem;
+    margin: .5rem 0;
+    background: lightblue;
+  }
+  50% {
+    height: 1rem;
+    margin: 1.5rem 0;
+    background: lightgreen;
+  }
+}
+
+@keyframes load {
+  0%, 100% {
+    height: 3rem;
+    margin: .5rem 0;
+    background: lightblue;
+  }
+  50% {
+    height: 1rem;
+    margin: 1.5rem 0;
+    background: lightgreen;
+  }
+}
+
+.side .me .portrait .loading span:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.side .me .portrait .loading span:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.side .me .portrait .loading span:nth-child(4) {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.side .me .portrait .loading span:nth-child(5) {
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.side .me .portrait .avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.side .me .portrait .avatar:hover {
+  transform: scale(1.05);
+}
+
+.side .me .portrait .avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.side .me .name {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.side .me .info-job {
+  margin: 0.5rem 0;
+  color: #666;
+  font-weight: normal;
+}
+
+/* 信息单元样式 */
+.side .info-unit ul li {
+  margin-bottom: 0.5rem;
+  list-style: none;
+}
+
+.side .info-unit ul li label {
+  display: inline-block;
+  width: 35%;
+  font-weight: bold;
+}
+
+.side .info-unit ul li span {
+  display: inline-block;
+  vertical-align: top;
+  width: 60%;
+}
+
+/* 技能进度条样式 */
+.side .skill ul li {
+  margin-bottom: 1rem;
+}
+
+.side .skill ul li label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.side .skill ul li progress {
+  width: 100%;
+  height: 0.8rem;
+}
+
+/* 主要内容样式 */
+.main {
+  flex: 1;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px #bbb;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.main .info-unit ul {
+  box-sizing: border-box;
+  padding-left: 1.2rem;
+  padding-right: 0.8rem;
+}
+
+.main .info-unit ul li {
+  margin-bottom: 1rem;
+  list-style: disc;
+}
+
+.main .info-unit ul li h3 time {
+  text-align: right;
+  float: right;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.main .info-unit ul li .info-content li {
+  list-style: circle;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* 项目展示样式 - 紧凑版本 */
+.main .project ul li {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.main .project ul li:last-child {
+  border-bottom: none;
+}
+
+.main .project ul li h3 {
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+.main .project ul li h3 span {
+  font-weight: bold;
+}
+
+.main .project .info-content {
+  margin-top: 0.3rem;
+}
+
+.main .project .info-content li {
+  margin-bottom: 0.2rem;
+  line-height: 1.4;
+}
+
+/* 教育经历样式 */
+.main .edu ul li h3 {
+  margin-bottom: 0.5rem;
+}
+
+.main .edu ul li p {
+  line-height: 1.6;
+  margin: 0.5rem 0;
+}
+
+/* 自我评价样式 */
+.main .work p {
+  line-height: 1.8;
+  text-align: justify;
+  margin: 0;
+}
+
+/* 页脚样式 */
+.footer {
+  width: 100%;
+  margin-top: 1rem;
+  height: 2rem;
+}
+
+.footer p {
+  line-height: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
+}
+
+/* 侧边导航样式 */
+aside {
+  position: fixed;
+  right: 0;
+  top: 30%;
+  z-index: 2;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+aside ul li {
+  margin-bottom: 10px;
+  border-radius: 19px 0 0 10px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  background: #1abc9c;
+  transition: all 0.3s ease;
+}
+
+aside ul li:hover {
+  transform: translateX(-5px);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+aside ul li a {
+  display: inline-block;
+  width: 80px;
+  height: 38px;
+  line-height: 38px;
+  padding-left: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+aside ul li a:hover {
+  color: #f0f0f0;
+}
+
+/* 通用样式 */
+.fa {
+  font-size: 1.2em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+hr {
+  margin-bottom: .4em;
+}
+
+mark {
+  background: rgba(232, 232, 232, 0.8);
+}
+
+progress {
+  background-color: #f6f6f6;
+  display: inline;
+  height: 1em;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #e0eaf0;
+}
+
+progress::-webkit-progress-value {
+  background-color: #1abc9c;
+}
+
+progress::-moz-progress-bar {
+  background-color: #e0eaf0;
+}
+
+progress::-moz-progress-value {
+  background-color: #708d9b;
+}
+
+.progress-list {
+  line-height: 2;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 1169px) {
+  .container .info-unit h3 span {
+    display: block;
+  }
+
+  .container .info-unit h3 span.link {
+    display: inline;
+  }
+
+  .container .project h3 span {
+    display: inline;
+  }
+
+  .container .project h3 time {
+    display: block;
+  }
+
+  .container .main .info-unit ul li h3 time {
+    float: none;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 1034px) {
+  body {
+    padding: 1rem 3%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .container .side {
+    position: static;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .container .main {
+    position: static;
+    margin-left: 0;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+  }
+
+  aside {
+    display: none;
+  }
+}
